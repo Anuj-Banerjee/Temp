@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm Sorry, Diya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #89c4f4, #004e92);
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      color: #ff6f61;
+      margin-top: 40px;
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .sticker {
+      width: 120px;
+      height: 120px;
+      margin: 10px;
+      border-radius: 10px;
+      animation: popIn 1s ease-in-out;
+    }
+    .container {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    audio {
+      margin-top: 20px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .heart {
+      font-size: 2em;
+      animation: heartbeat 1s infinite;
+    }
+    .apology-box {
+      background-color: #fff3cd;
+      border: 2px dashed #f7c948;
+      padding: 20px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: slideIn 1.2s ease-in-out;
+      position: relative;
+    }
+    .apology-box::before,
+    .apology-box::after,
+    .apology-box::marker {
+      content: "💐🌻🌼💐🌻🌼";
+      position: absolute;
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: left;
+    }
+    .apology-box::before {
+      top: -30px;
+    }
+    .apology-box::after {
+      bottom: -30px;
+    }
+    .apology-box .side-left,
+    .apology-box .side-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      font-size: 1.5rem;
+      writing-mode: vertical-rl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .apology-box .side-left {
+      left: -30px;
+      content: "💐🌻🌼💐🌻🌼";
+    }
+    .apology-box .side-right {
+      right: -30px;
+      content: "💐🌻🌼💐🌻🌼";
+    }
+    .flower-decor {
+      display: none;
+    }
+    .falling-heart {
+      position: fixed;
+      top: -10px;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 50% 50% 0 0;
+      transform: rotate(-45deg);
+      animation: fall linear infinite;
+      z-index: 0;
+    }
+    .falling-heart::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 50% 50% 0 0;
+      top: 0;
+      left: 0;
+      transform: rotate(90deg);
+    }
+    @keyframes fall {
+      0% {
+        top: -10px;
+        opacity: 1;
+        transform: translateX(0) rotate(-45deg);
+      }
+      100% {
+        top: 100vh;
+        opacity: 0;
+        transform: translateX(30px) rotate(-45deg);
+      }
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>I'm Sorry, Diya 💛</h1>
+    <div class="apology-box">
+      <div class="side-left">💐🌻🌼💐🌻🌼💐🌻🌼</div>
+      <div class="side-right">💐🌻🌼💐🌻🌼💐🌻🌼</div>
+      <p>Hey Diya,</p>
+      <p>I know it made you feel bad and i deeply regret my behaviour.
+        You are so important to me.</p>
+      <p>Please forgive me — I promise to learn and grow and do better and be more thoughtful 🥺</p>
+      <!-- <p>With all my love,<br><strong>Anuj</strong></p> -->
+      <div class="heart">💓</div>
+    </div>
+
+    <!-- Stickers -->
+    <div>
+      <img src="https://thumb.ac-illust.com/d6/d6908169011e3ef860a3ebc3f337910a_w.jpeg" alt="Cute Bear" class="sticker" />
+      <img src="https://elements-resized.envatousercontent.com/elements-cover-images/e6f8a157-cd41-4d59-bbf5-f87e69e8beba?w=2038&cf_fit=scale-down&q=85&format=auto&s=4dc7a8d39baea65f30f8456766da0721b49c904f4679d47bef89336552b79aed" alt="Blush Cat" class="sticker" />
+      <!-- <img src="https://i.imgur.com/Bh3U0sy.png" alt="Sad Puppy" class="sticker" /> -->
+      <img src="https://c7.alamy.com/comp/2GCH6R1/unhappy-kawaii-bunny-and-duckling-with-heart-shaped-balloon-inscription-im-sorry-cute-little-duck-and-rabbit-apologize-vector-illustration-eps8-2GCH6R1.jpg" alt="Sorry Bunny" class="sticker" />
+    </div>
+
+    <!-- Audio Song -->
+    <!-- Embedded Vocaroo audio -->
+    <!-- Embedded Vocaroo audio with better size and styling -->
+    <!-- Cropped Vocaroo audio player -->
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <div style="
+    width: 100%;
+    max-width: 400px;
+    height: 70px; /* Adjust this to crop more or less */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    
+    <iframe 
+      src="https://voca.ro/11eNUUu4UD8q" 
+      width="100%" 
+      height="200" 
+      style="border: none; transform: translateY(-10px);"
+      allow="autoplay">
+    </iframe>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Falling Hearts -->
+  <script>
+    const NUM_HEARTS = 30;
+    for (let i = 0; i < NUM_HEARTS; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('falling-heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      heart.style.opacity = Math.random();
+      document.body.appendChild(heart);
+    }
+  </script>
+  <div style="margin-top: 40px;">
+    <h2 style="color: #ff6f61; font-family: 'Pacifico', cursive;">Will you forgive me? </h2>
+    
+    <form id="forgiveForm">
+      <input type="hidden" name="forgiveness" id="forgivenessInput" value="" />
+      <button type="button" onclick="submitForgiveness(true)" style="
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #ffc0cb;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1em;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      ">Yes, I forgive you 🤗</button>
+  
+      <button type="button" onclick="submitForgiveness(false)" style="
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #f8d7da;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1em;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      ">Not yet 😔</button>
+    </form>
+    
+    <p id="forgiveMessage" style="margin-top: 20px; font-size: 1.2em; color: #444;"></p>
+  </div>
+  
+  <script>
+    const form = document.getElementById('forgiveForm');
+    const message = document.getElementById('forgiveMessage');
+    const forgivenessInput = document.getElementById('forgivenessInput');
+  
+    async function submitForgiveness(isForgiven) {
+      forgivenessInput.value = isForgiven ? "Yes, forgiven 💖" : "Not yet 😔";
+      
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch('https://formspree.io/f/mqaqnlqg', {  // <-- Replace with your Formspree URL
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        if (response.ok) {
+          message.innerText = isForgiven
+            ? "Yay!! 🥹💖 I’ll make it up to you, promise!"
+            : "I understand... I’ll wait and try harder 💔";
+        } else {
+          message.innerText = "Oops! Something went wrong, please try again.";
+        }
+      } catch (error) {
+        message.innerText = "Network error! Please check your connection.";
+      }
+    }
+  </script>
+  
+
+</body>
+</html>
