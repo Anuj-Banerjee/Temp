@@ -19,7 +19,7 @@
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 3em;
-      color: #ff6f61;
+      color: #a2190d;
       margin-top: 40px;
       animation: fadeInDown 1.5s ease-in-out;
     }
@@ -49,8 +49,8 @@
       animation: heartbeat 1s infinite;
     }
     .apology-box {
-      background-color: #fff3cd;
-      border: 2px dashed #f7c948;
+      background-color: #d3d3d38f;
+      border: 2px dashed #000000;
       padding: 20px;
       margin: 30px auto;
       width: 90%;
@@ -103,7 +103,7 @@
       width: 20px;
       height: 20px;
       background: transparent;
-      border: 2px solid white;
+      border: 2px solid rgba(0, 0, 0, 0.484);
       border-radius: 50% 50% 0 0;
       transform: rotate(-45deg);
       animation: fall linear infinite;
@@ -115,7 +115,7 @@
       width: 20px;
       height: 20px;
       background: transparent;
-      border: 2px solid white;
+      border: 2px solid rgba(0, 0, 0, 0.484);
       border-radius: 50% 50% 0 0;
       top: 0;
       left: 0;
@@ -220,14 +220,14 @@
     }
   </script>
   <div style="margin-top: 40px;">
-    <h2 style="color: #ff6f61; font-family: 'Pacifico', cursive;">Will you forgive me? </h2>
+    <h2 style="color: #a2190d; font-family: 'Pacifico', cursive;">Will you forgive me? </h2>
     
     <form id="forgiveForm">
       <input type="hidden" name="forgiveness" id="forgivenessInput" value="" />
       <button type="button" onclick="submitForgiveness(true)" style="
         padding: 10px 20px;
         margin: 10px;
-        background-color: #ffc0cb;
+        background-color: #ff00b3;
         border: none;
         border-radius: 10px;
         font-size: 1.1em;
@@ -238,7 +238,7 @@
       <button type="button" onclick="submitForgiveness(false)" style="
         padding: 10px 20px;
         margin: 10px;
-        background-color: #f8d7da;
+        background-color: #59224c;
         border: none;
         border-radius: 10px;
         font-size: 1.1em;
@@ -270,7 +270,7 @@
         });
         if (response.ok) {
           message.innerText = isForgiven
-            ? "Yay!! 🥹💖 I’ll make it up to you, promise!"
+            ? "Yay!! ❤️‍🩹 I’ll make it up to you, promise!"
             : "I understand... I’ll wait and try harder 💔";
         } else {
           message.innerText = "Oops! Something went wrong, please try again.";
